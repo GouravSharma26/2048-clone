@@ -5,7 +5,7 @@ Features include **Neon Theme**, **Dark Mode**, **Sliding Animations**, **High S
 
 ## 🕹️ Live Demo
 
-👉 [Play Now](#)  
+👉 [[Play Now]](https://2048-clone-iota.vercel.app/)(#)  
 <!-- Replace # with your hosted URL (e.g., GitHub Pages or Netlify) -->
 
 ---
