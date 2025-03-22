@@ -1,5 +1,9 @@
 let grid;
 let score = 0;
+let touchStartX = 0;
+let touchStartY = 0;
+let touchEndX = 0;
+let touchEndY = 0;
 let highScore = localStorage.getItem('highScore') || 0;
 
 function init() {
@@ -137,3 +141,47 @@ document.addEventListener('keydown', (e) => {
 });
 
 init();
+
+document.addEventListener('touchstart', handleTouchStart, false);
+document.addEventListener('touchend', handleTouchEnd, false);
+
+function handleTouchStart(e) {
+    const touch = e.touches[0];
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+  }
+  
+  function handleTouchEnd(e) {
+    const touch = e.changedTouches[0];
+    touchEndX = touch.clientX;
+    touchEndY = touch.clientY;
+  
+    handleSwipeGesture();
+  }
+  
+  function handleSwipeGesture() {
+    const deltaX = touchEndX - touchStartX;
+    const deltaY = touchEndY - touchStartY;
+  
+    // Set a minimum distance for swipe detection
+    const minDistance = 30;
+  
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      if (Math.abs(deltaX) > minDistance) {
+        if (deltaX > 0) {
+          move('right');
+        } else {
+          move('left');
+        }
+      }
+    } else {
+      if (Math.abs(deltaY) > minDistance) {
+        if (deltaY > 0) {
+          move('down');
+        } else {
+          move('up');
+        }
+      }
+    }
+  }
+  
