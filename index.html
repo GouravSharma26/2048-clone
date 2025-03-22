@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2048 Clone</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <h1>2048</h1>
+
+  <div class="score-container">
+    <div id="score">Score: 0</div>
+    <div id="high-score">High Score: 0</div>
+  </div>
+
+  <div class="button-container">
+    <button onclick="toggleTheme()">Toggle Dark Mode</button>
+    <button onclick="toggleNeon()">Toggle Neon Mode</button>
+    <button onclick="restartGame()">Restart</button>
+  </div>
+
+  <div id="game-container">
+    <!-- 16 cells (4x4 grid) -->
+    <div class="cell" id="cell-0-0"></div>
+    <div class="cell" id="cell-0-1"></div>
+    <div class="cell" id="cell-0-2"></div>
+    <div class="cell" id="cell-0-3"></div>
+
+    <div class="cell" id="cell-1-0"></div>
+    <div class="cell" id="cell-1-1"></div>
+    <div class="cell" id="cell-1-2"></div>
+    <div class="cell" id="cell-1-3"></div>
+
+    <div class="cell" id="cell-2-0"></div>
+    <div class="cell" id="cell-2-1"></div>
+    <div class="cell" id="cell-2-2"></div>
+    <div class="cell" id="cell-2-3"></div>
+
+    <div class="cell" id="cell-3-0"></div>
+    <div class="cell" id="cell-3-1"></div>
+    <div class="cell" id="cell-3-2"></div>
+    <div class="cell" id="cell-3-3"></div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
