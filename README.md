@@ -40,7 +40,7 @@ Features include **Neon Theme**, **Dark Mode**, **Sliding Animations**, **High S
 
 ---
 
-##📄 License
+## 📄 License
 - This project is open-source!
 - Feel free to fork, play around, and enhance it.
 - Licensed under the MIT License.
